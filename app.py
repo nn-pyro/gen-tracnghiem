@@ -2,7 +2,7 @@ import streamlit as st
 import pdfplumber
 import docx
 import os
-from langchain_google_genai import ChatGoogleGenerativeAI
+from langchain_together import ChatTogether
 from langchain_core.prompts import ChatPromptTemplate
 
 def extract_text_from_pdf(file):
@@ -46,9 +46,9 @@ def create_word(questions, title):
     return word_file_path
 
 
-llm = ChatGoogleGenerativeAI(
-    model="gemini-1.5-pro",
-    api_key="AIzaSyCNt6-88AU8CtLFoyugIG9AXkYloPVNDRI"
+llm = ChatTogether(
+    model="meta-llama/Meta-Llama-3.1-8B-Instruct-Turbo",
+    api_key="1d8fc48b1d2113e4a511c6309c08b9881a3e4a537476c829838089229b9f544f"
 )
 
 

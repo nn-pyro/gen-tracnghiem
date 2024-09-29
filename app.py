@@ -47,9 +47,10 @@ def create_word(questions, title):
 
 
 llm = ChatTogether(
-    model="meta-llama/Meta-Llama-3.1-8B-Instruct-Turbo",
+    model="google/gemma-2-27b-it",
     api_key="1d8fc48b1d2113e4a511c6309c08b9881a3e4a537476c829838089229b9f544f",
-    temperature = 0
+    temperature = 0.5,
+    max_tokens=8192,
 )
 
 

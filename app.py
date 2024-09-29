@@ -93,7 +93,7 @@ if __name__ == "__main__":
                     with st.spinner("Đang tạo bộ đề trắc nghiệm..."):
                         quiz_prompt = ChatPromptTemplate.from_messages(
                             [
-                                ("system", "Bạn là một trợ lý hữu ích giúp tạo câu hỏi trắc nghiệm từ văn bản."),
+                                ("system", "Bạn là một trợ lý hữu ích giúp tạo câu hỏi trắc nghiệm từ văn bản. Bạn chỉ được phép tạo bộ đề trắc nghiệm với 4 đáp án. Không được phép diễn giải thêm điều gì."),
                                 ("human", f"Dựa trên văn bản sau, hãy tạo một bộ {num_questions} câu hỏi trắc nghiệm với bốn lựa chọn (A, B, C, D) và chỉ rõ đáp án đúng:\n\n{text_data}")
                             ]
                         )
@@ -120,7 +120,7 @@ if __name__ == "__main__":
                     with st.spinner("Đang tạo bộ đề trắc nghiệm..."):
                         quiz_prompt_no_answer = ChatPromptTemplate.from_messages(
                             [
-                                ("system", "Bạn là một trợ lý hữu ích giúp tạo câu hỏi trắc nghiệm từ văn bản."),
+                                ("system", "Bạn là một trợ lý hữu ích giúp tạo câu hỏi trắc nghiệm từ văn bản. Bạn chỉ được phép tạo bộ đề trắc nghiệm với 4 đáp án. Không được phép diễn giải thêm điều gì."),
                                 ("human", f"Dựa trên văn bản sau, hãy tạo một bộ {num_questions} câu hỏi trắc nghiệm với bốn lựa chọn (A, B, C, D) mà không cần chỉ rõ đáp án đúng:\n\n{text_data}")
                             ]
                         )

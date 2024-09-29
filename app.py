@@ -50,7 +50,7 @@ llm = ChatTogether(
     model="google/gemma-2-9b-it",
     api_key="1d8fc48b1d2113e4a511c6309c08b9881a3e4a537476c829838089229b9f544f",
     temperature = 0.5,
-    max_tokens=5120,
+    max_new_tokens=5120,
 )
 
 
